@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "Monochromer",
+  "version": "0.1.0",
+
+  "description": "This extension makes web site monochrome.",
+  "author": "xia@silvia.com",
+  "homepage_url": "https://github.com/xia-sava/monochromer",
+
+  "permissions": [
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  "icons": {
+    "512": "icons/monochromer.svg"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "512": "icons/monochromer.svg"
+    },
+    "default_title": "Monochrome this page"
+  },
+  "options_ui": {
+    "page": "html/options.html"
+  }
+}
