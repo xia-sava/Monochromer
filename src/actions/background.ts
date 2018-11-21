@@ -1,8 +1,6 @@
 
 browser.browserAction.onClicked.addListener(async (tab) => {
-    //
-    console.log(`browserAction ${tab}`);
+    if (tab.id != null) {
+        await browser.tabs.executeScript(tab.id, {file: 'js/content.js'});
+    }
 });
-
-console.log("background");
-

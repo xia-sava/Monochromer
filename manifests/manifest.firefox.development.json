@@ -24,8 +24,5 @@
       "512": "icons/monochromer.svg"
     },
     "default_title": "Monochrome this page"
-  },
-  "options_ui": {
-    "page": "html/options.html"
   }
 }

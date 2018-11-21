@@ -9,6 +9,7 @@
   "homepage_url": "https://github.com/xia-sava/monochromer",
 
   "permissions": [
+    "activeTab"
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'",
 
@@ -23,8 +24,5 @@
       "512": "icons/monochromer.svg"
     },
     "default_title": "Monochrome this page"
-  },
-  "options_ui": {
-    "page": "html/options.html"
   }
 }

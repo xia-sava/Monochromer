@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname,
     entry: {
         background: "./src/Actions/background.ts",
-        options: "./src/Actions/options.tsx",
+        content: "./src/Actions/content.ts"
     },
     output: {
         path: __dirname + "/dist/js",
@@ -52,7 +52,7 @@ module.exports = {
             new UglifyJSPlugin({
                 uglifyOptions: {
                     compress: {
-                        drop_console: true
+                        drop_console: false
                     }
                 }
             })
