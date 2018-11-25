@@ -1,19 +1,37 @@
 import {Rgb} from './rgb';
 
 export class Monochrome {
+    /**
+     * モノクロ化処理を実行する．
+     */
     static monochromize() {
         const body = document.querySelector('body');
         if (body) {
-            if (body.dataset.monochromerModified != 'modified') {
-                // モノクロ化する
-                this.applyGrayscaleFilter(body);
-                this.applyMonochromeColor(body);
-            } else {
-                // 戻す
-                this.ceaseGrayscaleFilter(body);
-                this.ceaseMonochromeColor(body);
-            }
+            this.applyGrayscaleFilter(body);
+            this.applyMonochromeColor(body);
         }
+    }
+
+    /**
+     * リストア処理を実行する．
+     */
+    static restore() {
+        const body = document.querySelector('body');
+        if (body) {
+            this.ceaseGrayscaleFilter(body);
+            this.ceaseMonochromeColor(body);
+        }
+    }
+
+    /**
+     * モノクロ化済みかどうかを検査する．
+     */
+    static inspect() {
+        const body = document.querySelector('body');
+        if (body) {
+            return (body.dataset.monochromerModified == 'modified')
+        }
+        return false;
     }
 
     /**
