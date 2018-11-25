@@ -5,7 +5,8 @@ module.exports = {
     context: __dirname,
     entry: {
         background: "./src/Actions/background.ts",
-        content: "./src/Actions/content.ts"
+        content_modify: "./src/Actions/content_modify.ts",
+        content_inspect: "./src/Actions/content_inspect.ts",
     },
     output: {
         path: __dirname + "/dist/js",

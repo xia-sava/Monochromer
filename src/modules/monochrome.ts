@@ -45,7 +45,6 @@ export class Monochrome {
      */
     private static applyMonochromeColor(element: HTMLElement): void {
         const style = window.getComputedStyle(element);
-        console.log([style.backgroundColor, style.color, style.backgroundImage]);
         if (style.backgroundColor) {
             const rgb = Rgb.parse(style.backgroundColor);
             if (! rgb.isMonochrome()) {
